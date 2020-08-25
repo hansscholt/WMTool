@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{615D1FA2-D938-4723-8B0E-8AF080A8B0D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WORLDMAXTOOL</RootNamespace>
+    <AssemblyName>WORLDMAXTOOL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ReviewMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewMission.Designer.cs">
+      <DependentUpon>ReviewMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mission.cs" />
+    <Compile Include="Teske\Extensions.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teske\Util.cs" />
+    <Compile Include="Teske\Tools.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReviewMission.resx">
+      <DependentUpon>ReviewMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16x16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_005.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_006.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_007.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_008.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_009.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_010.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_011.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_012.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_013.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_014.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_015.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_016.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_017.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_018.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_019.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_020.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_021.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_022.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_023.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_024.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_025.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_026.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_027.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_028.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_029.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_030.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_031.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_032.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_033.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_034.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_035.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_036.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_037.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_038.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_039.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_040.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_041.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_042.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_043.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_044.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_045.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_046.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_047.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_048.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_049.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_050.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_051.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_052.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_053.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_054.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_055.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_056.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_057.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_058.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_059.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_060.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_061.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_062.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_063.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_064.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_065.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_066.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_067.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_068.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_069.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_070.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_071.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_072.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_073.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_074.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_075.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_076.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_077.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_078.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_079.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_080.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_081.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_082.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_083.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_084.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_085.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_086.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_087.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_088.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_089.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_090.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_091.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_092.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_093.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_094.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_095.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_096.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_097.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_098.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_099.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_100.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_101.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_102.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_103.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_104.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_105.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_106.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_107.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_108.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_109.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_110.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_111.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_112.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_113.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_114.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_115.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_116.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_117.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_118.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_119.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_120.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_121.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_122.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_123.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_124.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_125.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_126.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_127.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_128.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_129.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_130.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_131.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_132.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_133.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_134.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_135.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_136.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_137.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_138.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_139.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_140.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_141.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_142.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_143.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_144.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_145.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_146.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_147.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_148.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_149.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_150.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_151.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_152.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_153.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_154.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_155.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_156.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_157.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_158.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_159.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_160.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_161.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_162.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_163.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_164.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_165.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_166.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_167.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_168.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_169.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_170.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_171.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_172.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_173.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_174.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_175.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_176.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_177.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_178.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_179.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_180.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_181.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_182.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_183.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_184.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_185.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_186.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_187.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_190.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_191.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_192.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_193.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_194.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_195.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_196.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_197.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_203.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_204.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_205.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_206.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_209.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_210.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_214.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_215.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CH_216.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
